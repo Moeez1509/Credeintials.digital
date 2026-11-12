@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Savoré — A Modern Dining Experience</title>
+    <meta
+      name="description"
+      content="Savoré is a fictional modern dining concept where thoughtful flavors and beautiful moments meet."
+    />
+    <meta property="og:title" content="Savoré — A Modern Dining Experience" />
+    <meta
+      property="og:description"
+      content="A premium restaurant concept website designed by Credential.digital."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#241a16" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23241a16'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-family='serif' font-size='66' fill='%23c5a46d'%3ES%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Small browser-control refinements for the dark reservation panel. */
+    .reserve-form select {
+      color-scheme: dark;
+      background-color: transparent;
+      color: var(--ivory);
+    }
+    .reserve-form select option {
+      background: var(--charcoal);
+      color: var(--ivory);
+    }
+    .reserve-form select:focus {
+      border-color: var(--gold);
+      outline: none;
+    }
+    .hero-note { display: none; }
+  </style>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Savoré home"
+          ><span>Savor</span><i>é</i></a
+        >
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#home">Home</a
+          ><a class="nav-link" href="#story">Our Story</a
+          ><a class="nav-link" href="#menu">Menu</a
+          ><a class="nav-link" href="#gallery">Gallery</a
+          ><a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <a class="button button-small nav-cta" href="#reserve"
+          >Reserve a table <span>↗</span></a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-image"></div>
+        <div class="hero-shade"></div>
+        <div class="container hero-content reveal">
+          <p class="eyebrow light"><span></span> Modern dining experience</p>
+          <h1>A taste<br /><em>worth</em> remembering.</h1>
+          <p class="hero-copy">
+            Thoughtfully prepared dishes, beautiful flavors and an unforgettable
+            dining experience at Savoré.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#menu">Explore our menu <span>↗</span></a
+            ><a class="text-link light-link" href="#reserve"
+              >Reserve a table <span>↗</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-stamp">
+          <span>Est.</span><strong>SV</strong><span>Concept dining</span>
+        </div>
+      </section>
+
+      <section class="intro section" id="story">
+        <div class="container intro-grid">
+          <div class="intro-visual reveal">
+            <img
+              src="assets/images/hero.jpg"
+              alt="Beautifully plated dish on a dining table"
+              loading="lazy"
+            />
+            <div class="image-caption">
+              The art of gathering <span>—</span> 01
+            </div>
+          </div>
+          <div class="intro-copy reveal">
+            <p class="eyebrow"><span></span> Our story</p>
+            <h2>More than<br /><em>just a meal.</em></h2>
+            <p>
+              At Savoré, dining is about more than what’s on the plate. It’s
+              about bringing people together through thoughtful flavors,
+              carefully prepared dishes and an inviting atmosphere.
+            </p>
+            <p>
+              Every detail is considered, from the first pour to the last bite,
+              creating space for the moments you’ll want to remember.
+            </p>
+            <a class="text-link" href="#experience"
+              >Discover the experience <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="favorites section dark-section" id="favorites">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="eyebrow gold"><span></span> From our kitchen</p>
+              <h2>A few of our<br /><em>favorites.</em></h2>
+            </div>
+            <p>
+              Inspired by fresh ingredients and memorable flavors. A small taste
+              of what’s waiting.
+            </p>
+          </div>
+          <div class="dish-grid">
+            <article class="dish-card reveal">
+              <div class="dish-img">
+                <img
+                  src="assets/images/risotto.jpg"
+                  alt="Truffle mushroom pasta"
+                  loading="lazy"
+                /><span class="dish-number">01</span>
+              </div>
+              <div class="dish-meta">
+                <h3>Truffle Mushroom Risotto</h3>
+                <strong>$18</strong>
+              </div>
+              <p>
+                Creamy arborio rice with mushrooms, parmesan and truffle notes.
+              </p>
+            </article>
+            <article class="dish-card reveal">
+              <div class="dish-img">
+                <img
+                  src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=85"
+                  alt="Grilled herb chicken"
+                  loading="lazy"
+                /><span class="dish-number">02</span>
+              </div>
+              <div class="dish-meta">
+                <h3>Grilled Herb Chicken</h3>
+                <strong>$22</strong>
+              </div>
+              <p>
+                Tender grilled chicken with seasonal vegetables and herb sauce.
+              </p>
+            </article>
+            <article class="dish-card reveal">
+              <div class="dish-img">
+                <img
+                  src="assets/images/pizza.jpg"
+                  alt="Classic margherita pizza"
+                  loading="lazy"
+                /><span class="dish-number">03</span>
+              </div>
+              <div class="dish-meta">
+                <h3>Classic Margherita Pizza</h3>
+                <strong>$16</strong>
+              </div>
+              <p>Fresh mozzarella, tomato sauce and aromatic basil.</p>
+            </article>
+            <article class="dish-card reveal">
+              <div class="dish-img">
+                <img
+                  src="assets/images/fondant.jpg"
+                  alt="Warm chocolate fondant"
+                  loading="lazy"
+                /><span class="dish-number">04</span>
+              </div>
+              <div class="dish-meta">
+                <h3>Chocolate Fondant</h3>
+                <strong>$12</strong>
+              </div>
+              <p>Warm chocolate dessert with a soft molten center.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section" id="menu">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow"><span></span> The menu</p>
+            <h2>Explore our <em>menu.</em></h2>
+            <p>
+              A considered collection of familiar favorites and new discoveries.
+            </p>
+          </div>
+          <div class="filter-tabs reveal" role="tablist">
+            <button class="filter active" data-filter="all">All dishes</button
+            ><button class="filter" data-filter="starters">Starters</button
+            ><button class="filter" data-filter="mains">Main course</button
+            ><button class="filter" data-filter="pasta">Pasta & pizza</button
+            ><button class="filter" data-filter="desserts">Desserts</button
+            ><button class="filter" data-filter="drinks">Beverages</button>
+          </div>
+          <div class="menu-list reveal">
+            <article class="menu-item" data-category="starters">
+              <div>
+                <span class="menu-kicker">To begin</span>
+                <h3>Whipped Ricotta & Charred Bread</h3>
+                <p>Local honey, cracked pepper, warm sourdough</p>
+              </div>
+              <strong>$11</strong>
+            </article>
+            <article class="menu-item" data-category="starters">
+              <div>
+                <span class="menu-kicker">To begin</span>
+                <h3>Heirloom Tomato Salad</h3>
+                <p>Garden basil, stracciatella, aged balsamic</p>
+              </div>
+              <strong>$14</strong>
+            </article>
+            <article class="menu-item" data-category="mains">
+              <div>
+                <span class="menu-kicker">From the kitchen</span>
+                <h3>Grilled Herb Chicken</h3>
+                <p>Seasonal vegetables, roasted herb jus</p>
+              </div>
+              <strong>$22</strong>
+            </article>
+            <article class="menu-item" data-category="mains">
+              <div>
+                <span class="menu-kicker">From the kitchen</span>
+                <h3>Pan-Seared Salmon</h3>
+                <p>Lemon beurre blanc, greens, crisp potatoes</p>
+              </div>
+              <strong>$26</strong>
+            </article>
+            <article class="menu-item" data-category="pasta">
+              <div>
+                <span class="menu-kicker">Handmade</span>
+                <h3>Truffle Mushroom Risotto</h3>
+                <p>Arborio rice, parmesan, woodland mushrooms</p>
+              </div>
+              <strong>$18</strong>
+            </article>
+            <article class="menu-item" data-category="pasta">
+              <div>
+                <span class="menu-kicker">Handmade</span>
+                <h3>Classic Margherita Pizza</h3>
+                <p>San Marzano tomato, mozzarella, basil</p>
+              </div>
+              <strong>$16</strong>
+            </article>
+            <article class="menu-item" data-category="desserts">
+              <div>
+                <span class="menu-kicker">Something sweet</span>
+                <h3>Chocolate Fondant</h3>
+                <p>Molten dark chocolate, vanilla bean cream</p>
+              </div>
+              <strong>$12</strong>
+            </article>
+            <article class="menu-item" data-category="desserts">
+              <div>
+                <span class="menu-kicker">Something sweet</span>
+                <h3>Fresh Berry Cheesecake</h3>
+                <p>Silky cheesecake, seasonal berries</p>
+              </div>
+              <strong>$11</strong>
+            </article>
+            <article class="menu-item" data-category="drinks">
+              <div>
+                <span class="menu-kicker">From the bar</span>
+                <h3>Botanical Tonic</h3>
+                <p>Fresh citrus, rosemary, sparkling tonic</p>
+              </div>
+              <strong>$8</strong>
+            </article>
+            <article class="menu-item" data-category="drinks">
+              <div>
+                <span class="menu-kicker">From the bar</span>
+                <h3>House Iced Tea</h3>
+                <p>Black tea, stone fruit, fresh mint</p>
+              </div>
+              <strong>$6</strong>
+            </article>
+          </div>
+          <p class="concept-note">
+            Sample menu for concept demonstration <span>—</span> prices and
+            dishes are fictional.
+          </p>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="container experience-grid">
+          <div class="experience-copy reveal">
+            <p class="eyebrow"><span></span> The Savoré feeling</p>
+            <h2>Made for<br /><em>memorable moments.</em></h2>
+            <p>
+              Come for the food. Stay for the feeling. Our imagined dining room
+              is warm, intimate and made to turn an ordinary evening into
+              something a little more special.
+            </p>
+            <a class="text-link" href="#gallery"
+              >See the gallery <span>↗</span></a
+            >
+          </div>
+          <div class="experience-images reveal">
+            <img
+              class="exp-main"
+              src="assets/images/candlelight.jpg"
+              alt="Warm modern restaurant interior"
+              loading="lazy"
+            /><img
+              class="exp-small"
+              src="assets/images/gathering.jpg"
+              alt="Friends sharing a meal"
+              loading="lazy"
+            /><span class="vertical-label">A place to linger</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="eyebrow"><span></span> In good company</p>
+              <h2>A visual taste<br />of <em>Savoré.</em></h2>
+            </div>
+            <p>
+              Little details, shared plates and the glow of a table well set.
+            </p>
+          </div>
+          <div class="gallery-grid reveal">
+            <button
+              class="gallery-item gallery-wide"
+              data-full="assets/images/candlelight.jpg"
+            >
+              <img
+                src="assets/images/candlelight.jpg"
+                alt="Restaurant dining room"
+                loading="lazy"
+              /></button
+            ><button class="gallery-item" data-full="assets/images/dish.jpg">
+              <img
+                src="assets/images/dish.jpg"
+                alt="Fresh dish with herbs"
+                loading="lazy"
+              /></button
+            ><button
+              class="gallery-item"
+              data-full="assets/images/gathering.jpg"
+            >
+              <img
+                src="assets/images/gathering.jpg"
+                alt="Elegant table setting"
+                loading="lazy"
+              /></button
+            ><button
+              class="gallery-item"
+              data-full="assets/images/pizza-detail.jpg"
+            >
+              <img
+                src="assets/images/pizza-detail.jpg"
+                alt="Pizza on a wooden table"
+                loading="lazy"
+              /></button
+            ><button
+              class="gallery-item gallery-tall"
+              data-full="assets/images/candlelight.jpg"
+            >
+              <img
+                src="assets/images/candlelight.jpg"
+                alt="Candlelit restaurant table"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reserve section dark-section" id="reserve">
+        <div class="container reserve-grid">
+          <div class="reserve-intro reveal">
+            <p class="eyebrow gold"><span></span> Make a moment of it</p>
+            <h2>Your table<br />is <em>waiting.</em></h2>
+            <p>
+              Planning a special evening or simply craving something delicious?
+              Get in touch to arrange your visit.
+            </p>
+            <div class="reserve-details">
+              <div>
+                <span>Hours</span>
+                <p>Monday — Thursday<br />11:00 am — 10:00 pm</p>
+                <p>Friday — Saturday<br />11:00 am — 11:00 pm</p>
+                <p>Sunday<br />12:00 pm — 9:00 pm</p>
+              </div>
+              <div>
+                <span>Find us</span>
+                <p>123 Culinary Avenue<br />New York, NY 10001</p>
+              </div>
+            </div>
+          </div>
+          <form class="reserve-form reveal" novalidate>
+            <div class="form-row">
+              <label
+                >Full name<input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required /></label
+              ><label
+                >Email address<input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+              /></label>
+            </div>
+            <div class="form-row">
+              <label
+                >Preferred date<input type="date" name="date" required /></label
+              ><label
+                >Preferred time<select name="time" required>
+                  <option value="">Select a time</option>
+                  <option>5:00 pm</option>
+                  <option>6:30 pm</option>
+                  <option>8:00 pm</option>
+                  <option>9:30 pm</option>
+                </select></label
+              >
+            </div>
+            <div class="form-row">
+              <label
+                >Number of guests<select name="guests" required>
+                  <option value="">Select guests</option>
+                  <option>2 guests</option>
+                  <option>3 guests</option>
+                  <option>4 guests</option>
+                  <option>5+ guests</option>
+                </select></label
+              ><label
+                >Phone number<input
+                  type="tel"
+                  name="phone"
+                  placeholder="Optional"
+              /></label>
+            </div>
+            <label
+              >Anything we should know?
+              <textarea
+                name="message"
+                rows="3"
+                placeholder="A special occasion, dietary notes..."
+              ></textarea></label
+            ><button class="button" type="submit">
+              Request a reservation <span>↗</span>
+            </button>
+            <p class="form-status" aria-live="polite"></p>
+            <p class="form-note">
+              Demo only: no reservation is confirmed, transmitted, or stored.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="visit section" id="contact">
+        <div class="container visit-grid">
+          <div class="visit-copy reveal">
+            <p class="eyebrow"><span></span> Come say hello</p>
+            <h2>Visit<br /><em>Savoré.</em></h2>
+            <p>
+              A fictional place for this portfolio concept. The details below
+              are demonstration information and are ready to be replaced.
+            </p>
+            <div class="contact-lines">
+              <p>
+                <span>Email</span
+                ><a href="mailto:hello@savore-demo.com">hello@savore-demo.com</a>
+              </p>
+              <p>
+                <span>Phone</span><a href="tel:+10000000000">+1 (000) 000-0000</a>
+              </p>
+              <p>
+                <span>Instagram</span><a href="#contact">@savore.restaurant ↗</a>
+              </p>
+            </div>
+          </div>
+          <div class="map-card reveal">
+            <div class="map-lines"></div>
+            <div class="map-pin">✦</div>
+            <div class="map-label">
+              <strong>Savoré</strong><span>Location placeholder</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="brand footer-brand" href="#home"
+              ><span>Savor</span><i>é</i></a
+            >
+            <p>A modern dining concept<br />for memorable moments.</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <span>Explore</span><a href="#story">Our Story</a
+              ><a href="#menu">Menu</a><a href="#gallery">Gallery</a>
+            </div>
+            <div>
+              <span>Connect</span><a href="#reserve">Reservations</a
+              ><a href="#contact">Contact</a><a href="#contact">Instagram ↗</a>
+            </div>
+            <div>
+              <span>Visit</span>
+              <p>123 Culinary Avenue<br />New York, NY 10001</p>
+              <p>Mon — Thu · 11am — 10pm<br />Fri — Sat · 11am — 11pm<br />Sun · 12pm — 9pm</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Savoré concept</span
+          ><span
+            >Concept website — Designed by
+            <strong>Credential.digital</strong></span
+          ><a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+    <div
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image preview"
+    >
+      <button class="lightbox-close" aria-label="Close image preview">×</button
+      ><img src="" alt="" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
