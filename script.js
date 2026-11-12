@@ -15,6 +15,7 @@ toggle.addEventListener('click',()=>{
   toggle.setAttribute('aria-expanded',open);
 });
 links.forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+document.querySelector('.mobile-nav-cta').addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')});
 
 document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{
   document.querySelector('.filter.active').classList.remove('active');button.classList.add('active');

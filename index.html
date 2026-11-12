@@ -42,6 +42,26 @@
       outline: none;
     }
     .hero-note { display: none; }
+    .mobile-nav-cta { display: none; }
+    @media (max-width: 900px) {
+      .site-header { background: rgba(247, 243, 236, .96); box-shadow: 0 1px 0 var(--line); backdrop-filter: blur(14px); }
+      .nav-wrap { width: min(100% - 44px, 600px); }
+      .main-nav { top: 82px; padding: 12px 22px 26px; background: var(--ivory); border-top: 1px solid var(--line); box-shadow: 0 18px 28px rgba(36, 26, 22, .12); }
+      .main-nav .nav-link { display: flex; align-items: center; min-height: 52px; border-bottom: 1px solid var(--line); font-size: 14px; letter-spacing: .01em; }
+      .main-nav .nav-link::after { display: none; }
+      .main-nav .nav-link.active { color: var(--terracotta); font-weight: 700; }
+      .mobile-nav-cta { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; padding: 14px 17px; background: var(--terracotta); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      .mobile-nav-cta span { font-size: 17px; font-weight: 400; }
+      .menu-toggle { width: 42px; height: 42px; align-items: center; justify-content: center; gap: 6px; margin-right: 0; border: 1px solid var(--line); color: var(--espresso); cursor: pointer; }
+      .menu-toggle span { width: 18px; transition: transform .25s ease; }
+      .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
+      .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+    }
+    @media (max-width: 580px) {
+      .nav-wrap { width: calc(100% - 36px); }
+      .brand { font-size: 24px; }
+      .main-nav { top: 82px; padding-left: 18px; padding-right: 18px; }
+    }
   </style>
   </head>
   <body>
@@ -63,6 +83,7 @@
           ><a class="nav-link" href="#menu">Menu</a
           ><a class="nav-link" href="#gallery">Gallery</a
           ><a class="nav-link" href="#contact">Contact</a>
+          <a class="mobile-nav-cta" href="#reserve">Reserve a table <span>â†—</span></a>
         </nav>
         <a class="button button-small nav-cta" href="#reserve"
           >Reserve a table <span>↗</span></a
