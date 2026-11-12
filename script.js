@@ -7,15 +7,22 @@ window.addEventListener('scroll',()=>{
   header.classList.toggle('scrolled',window.scrollY>30);
   const sections=[...document.querySelectorAll('main section[id]')];
   const current=sections.reduce((active,section)=>window.scrollY>=section.offsetTop-150?section.id:active,'home');
-  links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+current));
+  links.forEach(link=>{
+    const active=link.getAttribute('href')==='#'+current;
+    link.classList.toggle('active',active);
+    if(active) link.setAttribute('aria-current','page'); else link.removeAttribute('aria-current');
+  });
 },{passive:true});
 
 toggle.addEventListener('click',()=>{
   const open=nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded',open);
+  document.body.classList.toggle('no-scroll',open);
 });
-links.forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
-document.querySelector('.mobile-nav-cta').addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')});
+function closeMenu(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('no-scroll')}
+links.forEach(link=>link.addEventListener('click',closeMenu));
+document.querySelector('.mobile-nav-cta').addEventListener('click',closeMenu);
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
 
 document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{
   document.querySelector('.filter.active').classList.remove('active');button.classList.add('active');
